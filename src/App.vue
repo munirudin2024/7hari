@@ -215,22 +215,66 @@
       <p class="footer-credit">Selalu di hati, selamanya dalam doa</p>
     </footer>
 
+    <button
+      type="button"
+      class="music-fab"
+      :class="{ 'is-playing': isMusicPlaying }"
+      :aria-pressed="isMusicPlaying"
+      :aria-label="isMusicPlaying ? 'Matikan musik' : 'Putar musik'"
+      @click="toggleMusic"
+    >
+      <span class="music-fab-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 18V6l10-2v12" />
+          <circle cx="7" cy="18" r="3" fill="currentColor" stroke="none" />
+          <circle cx="17" cy="16" r="3" fill="currentColor" stroke="none" />
+        </svg>
+      </span>
+      <span class="music-fab-text">Music</span>
+    </button>
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { computed, onBeforeUnmount, ref } from "vue";
 
 const phone = "081337694488";
 const email = "muhammadmunirudin26@gmail.com";
 const driveFolderId = "1bn88ebnrYDrbb5QftMvF_Zs_YTdh1Nch";
 const driveEmbedUrl = `https://drive.google.com/embeddedfolderview?id=${driveFolderId}#grid`;
 const photoUrl = ref(`${import.meta.env.BASE_URL}ibu.jpeg`);
+const musicAudio = new Audio(`${import.meta.env.BASE_URL}dd.mp3`);
+const isMusicPlaying = ref(false);
+
+musicAudio.loop = true;
+musicAudio.preload = "auto";
+musicAudio.volume = 0.6;
 
 function handleImgError(e: Event) {
   (e.target as HTMLImageElement).src =
     "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=400&h=600&fit=crop";
 }
+
+async function toggleMusic() {
+  if (isMusicPlaying.value) {
+    musicAudio.pause();
+    isMusicPlaying.value = false;
+    return;
+  }
+
+  try {
+    await musicAudio.play();
+    isMusicPlaying.value = true;
+  } catch {
+    isMusicPlaying.value = false;
+  }
+}
+
+onBeforeUnmount(() => {
+  musicAudio.pause();
+  musicAudio.currentTime = 0;
+});
 
 const tahlilDays = computed(() => {
   const wafat = new Date("2026-04-28");

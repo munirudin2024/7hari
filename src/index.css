@@ -260,7 +260,7 @@ body {
 .gold-rule-diamond { color:var(--gold-bright);font-size:0.55rem; }
 .wafat-text { font-size:0.9rem;color:rgba(245,232,192,0.7);font-weight:300; }
 .wafat-date { font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--orange-soft);font-weight:400; }
-.wafat-sub { font-size:0.78rem;color:rgba(245,200,150,0.4);margin-top:8px;line-height:1.65;max-width:360px; }
+.wafat-sub { font-size:0.78rem;color:rgba(245,200,150,0.4);margin:8px auto 0;line-height:1.65;max-width:360px;text-align:center; }
 
 /* ============================================
    PORTRAIT PHOTO
@@ -459,6 +459,107 @@ body {
 .footer-trans { font-size:0.73rem;color:rgba(245,200,150,0.32);font-style:italic;margin-bottom:18px;position:relative;z-index:1; }
 .footer-name { font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:rgba(224,120,48,0.42);letter-spacing:0.05em;margin-bottom:4px;position:relative;z-index:1; }
 .footer-credit { font-size:0.68rem;color:rgba(245,200,150,0.2);letter-spacing:0.08em;position:relative;z-index:1; }
+
+/* ============================================
+   MUSIC FAB
+   ============================================ */
+.music-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid rgba(240, 208, 112, 0.45);
+  border-radius: 999px;
+  color: #fff7db;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 244, 192, 0.95) 0%, rgba(240, 208, 112, 0.92) 18%, rgba(200, 160, 72, 0.9) 58%, rgba(136, 92, 28, 0.9) 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 236, 160, 0.12),
+    0 0 18px rgba(240, 208, 112, 0.48),
+    0 0 36px rgba(240, 208, 112, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  cursor: pointer;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+  animation: music-flicker 2.8s ease-in-out infinite, music-float 5.5s ease-in-out infinite;
+}
+.music-fab::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+  background: radial-gradient(circle, rgba(255, 236, 160, 0.34) 0%, transparent 70%);
+  filter: blur(8px);
+  z-index: -1;
+  animation: music-halo 2.6s ease-in-out infinite;
+}
+.music-fab:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 0 0 1px rgba(255, 244, 192, 0.22),
+    0 0 20px rgba(240, 208, 112, 0.6),
+    0 0 42px rgba(240, 208, 112, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+.music-fab:focus-visible {
+  outline: 2px solid rgba(255, 244, 192, 0.9);
+  outline-offset: 3px;
+}
+.music-fab.is-playing {
+  animation: music-flicker 1.9s ease-in-out infinite, music-float 5.5s ease-in-out infinite;
+}
+.music-fab-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(255, 236, 160, 0.55));
+}
+.music-fab-icon svg {
+  width: 18px;
+  height: 18px;
+}
+.music-fab-text {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(255, 244, 192, 0.55);
+}
+
+@keyframes music-flicker {
+  0%, 100% { opacity: 0.82; filter: brightness(1); }
+  18% { opacity: 1; filter: brightness(1.12); }
+  32% { opacity: 0.72; filter: brightness(0.95); }
+  48% { opacity: 1; filter: brightness(1.15); }
+  66% { opacity: 0.88; filter: brightness(1.02); }
+  82% { opacity: 1; filter: brightness(1.18); }
+}
+@keyframes music-halo {
+  0%, 100% { opacity: 0.45; transform: scale(0.96); }
+  50% { opacity: 0.95; transform: scale(1.08); }
+}
+@keyframes music-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@media (max-width: 600px) {
+  .music-fab {
+    right: 14px;
+    bottom: 14px;
+    padding: 11px 14px;
+  }
+  .music-fab-text {
+    font-size: 0.68rem;
+  }
+}
 
 /* ============================================
    RESPONSIVE
