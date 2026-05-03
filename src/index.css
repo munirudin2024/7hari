@@ -274,7 +274,7 @@ body {
   box-shadow:0 0 0 1px rgba(224,120,48,0.15),0 12px 50px rgba(224,120,48,0.3),0 24px 80px rgba(0,0,0,0.5);
 }
 .portrait-inner { width:100%;height:100%;border-radius:12px;overflow:hidden;background:var(--night-800); }
-.portrait-img { width:100%;height:100%;object-fit:cover;object-position:top center;display:block; }
+.portrait-img { width:100%;height:100%;object-fit:contain;object-position:top center;display:block;background:var(--night-900); }
 .portrait-corner { position:absolute;width:20px;height:20px;z-index:10; }
 .portrait-corner.tl { top:-3px;left:-3px;  border-top:2px solid var(--gold-bright);border-left:2px solid var(--gold-bright);  border-top-left-radius:18px; }
 .portrait-corner.tr { top:-3px;right:-3px; border-top:2px solid var(--gold-bright);border-right:2px solid var(--gold-bright); border-top-right-radius:18px; }
@@ -392,6 +392,198 @@ body {
 .gallery-embed { position:relative;min-height:520px;overflow:hidden; }
 .drive-iframe { width:100%;height:100%;min-height:520px;border:none; }
 .gallery-note { text-align:center;font-size:0.72rem;color:rgba(224,120,48,0.38);margin-top:16px;letter-spacing:0.05em; }
+
+/* ============================================
+   NETFLIX-STYLE CAROUSEL
+   ============================================ */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  padding: 0 60px;
+}
+
+.carousel-track {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  height: 520px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center center;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Center item - full size, no transform */
+.carousel-item.is-center {
+  opacity: 1;
+  transform: translateX(0) scale(1) rotateY(0deg);
+  z-index: 10;
+}
+
+/* Left item - skewed right */
+.carousel-item.is-left {
+  opacity: 0.6;
+  transform: translateX(-65%) scale(0.7) rotateY(15deg);
+  z-index: 5;
+  filter: brightness(0.5);
+}
+
+/* Right item - skewed left */
+.carousel-item.is-right {
+  opacity: 0.6;
+  transform: translateX(65%) scale(0.7) rotateY(-15deg);
+  z-index: 5;
+  filter: brightness(0.5);
+}
+
+/* Hidden items */
+.carousel-item.is-hidden {
+  opacity: 0;
+  transform: translateX(100%) scale(0.5);
+}
+
+.carousel-media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  background: var(--night-900);
+}
+
+.carousel-video-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.carousel-video-badge svg {
+  width: 28px;
+  height: 28px;
+  margin-left: 4px;
+}
+
+/* Navigation arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(224, 120, 48, 0.3);
+  border-radius: 50%;
+  color: var(--gold-pale);
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgba(224, 120, 48, 0.2);
+  border-color: var(--orange-vivid);
+}
+
+.carousel-arrow-left {
+  left: 0;
+}
+
+.carousel-arrow-right {
+  right: 0;
+}
+
+.carousel-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Counter display */
+.carousel-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 28px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.carousel-counter-label {
+  font-size: 0.9rem;
+  color: var(--orange-soft);
+  letter-spacing: 0.1em;
+}
+
+.carousel-counter-num {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.carousel-counter-sep {
+  font-size: 1rem;
+  color: rgba(224, 120, 48, 0.4);
+}
+
+.carousel-counter-total {
+  font-size: 1rem;
+  color: rgba(245, 200, 150, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .carousel-wrapper {
+    min-height: 320px;
+    padding: 0 50px;
+  }
+  .carousel-track {
+    height: 280px;
+    max-width: 90%;
+  }
+  .carousel-item.is-left {
+    transform: translateX(-55%) scale(0.6) rotateY(12deg);
+  }
+  .carousel-item.is-right {
+    transform: translateX(55%) scale(0.6) rotateY(-12deg);
+  }
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  .carousel-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 /* ============================================
    FEATURE GRID — glass cards on dark bg

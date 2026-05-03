@@ -33,16 +33,16 @@
         </div>
 
         <div class="name-block">
-          <p class="in-memoriam-label">almarhumah</p>
-          <h2 class="name-title">ibu Sunipah binti Karim</h2>
+          <p class="in-memoriam-label">ibu</p>
+          <h2 class="name-title">sunipah binti karim</h2>
           <div class="gold-rule">
             <span class="gold-rule-line"></span>
             <span class="gold-rule-diamond">◆</span>
             <span class="gold-rule-line"></span>
           </div>
-          <p class="wafat-text">Wafat pada <span class="wafat-date">28 April 2026</span></p>
-          <p class="wafat-text">hari selasa - jam 19:00 wib</p>
-          <p class="wafat-sub">Semoga Allah SWT merahmati dan menempatkan beliau di surga yang tertinggi</p>
+          <p class="wafat-text">Wafat pada <span class="wafat-date">28 April 2026</span> jam 19:00 wib</p>
+          <p class="wafat-text"> dimakamkan jam 22:00-23:00 wib di TPU dusun tegalsari</p>
+          <p class="wafat-sub">Semoga Allah SWT merahmati dan menempatkan beliau di surga</p>
         </div>
       </div>
 
@@ -64,7 +64,7 @@
 
       <div class="container-md" style="position:relative;z-index:2">
         <div class="section-header">
-          <span class="section-tag">Peringatan</span>
+          
           <h2 class="section-title light">Tahlilan 7 Hari</h2>
           <div class="section-ornament">
             <span class="orn-line"></span>
@@ -72,7 +72,7 @@
             <span class="orn-line"></span>
           </div>
           <p class="section-desc light">
-            Memohon kepada Allah SWT agar memberikan ampunan, rahmat, dan tempat terbaik bagi almarhumah ibuSunipah binti Karim
+            Memohon kepada Allah SWT agar memberikan ampunan, rahmat, dan tempat terbaik bagi alm ibu Sunipah binti Karim
           </p>
         </div>
 
@@ -105,7 +105,7 @@
         </div>
 
         <div class="doa-banner">
-          <div class="doa-banner-ornament">✦ ✦ ✦</div>
+          <div class="doa-banner-ornament"></div>
           <p class="doa-arabic">اللَّهُمَّ اغْفِرْ لَهَا وَارْحَمْهَا وَعَافِهَا وَاعْفُ عَنْهَا</p>
           <p class="doa-latin">"Ya Allah, ampunilah dia, rahmatilah dia, sejahterakanlah dia dan maafkanlah dia"</p>
         </div>
@@ -117,7 +117,6 @@
       <div class="container-lg">
         <div class="section-header">
           <span class="section-tag gold">Kenangan</span>
-          <h2 class="section-title light">Galeri Foto &amp; Video</h2>
           <div class="section-ornament">
             <span class="orn-line gold"></span>
             <span class="orn-gem gold">❧</span>
@@ -125,20 +124,60 @@
           </div>
         </div>
 
-        <div class="gallery-frame">
-          <div class="gallery-corner tl"></div>
-          <div class="gallery-corner tr"></div>
-          <div class="gallery-corner bl"></div>
-          <div class="gallery-corner br"></div>
-          <div class="gallery-embed">
-            <iframe
-              :src="driveEmbedUrl"
-              frameborder="0"
-              allowfullscreen
-              class="drive-iframe"
-              title="Galeri Kenangan Sunipah binti Karim"
-            ></iframe>
+        <!-- Netflix-style Carousel -->
+        <div class="carousel-wrapper">
+          <!-- Left Arrow -->
+          <button class="carousel-arrow carousel-arrow-left" @click="prevItem" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+
+          <!-- Carousel Items -->
+          <div class="carousel-track" @click="nextItem">
+            <div
+              v-for="(item, idx) in demoGalleryItems"
+              :key="idx"
+              class="carousel-item"
+              :data-idx="idx"
+              :class="{
+                'is-center': idx === currentIndex,
+                'is-left': idx === (currentIndex - 1 + totalItems) % totalItems,
+                'is-right': idx === (currentIndex + 1) % totalItems,
+                'is-hidden': idx !== currentIndex && idx !== (currentIndex - 1 + totalItems) % totalItems && idx !== (currentIndex + 1) % totalItems
+              }"
+            >
+              <template v-if="item.type === 'photo'">
+                <img :src="item.url" :alt="`Foto ${idx + 1}`" class="carousel-media" />
+              </template>
+              <template v-else>
+                <video
+                  :src="item.url"
+                  class="carousel-media"
+                  :muted="false"
+                  :loop="true"
+                  :playsinline="true"
+                  :controls="false"
+                  ref="videoRefs"
+                ></video>
+              </template>
+            </div>
           </div>
+
+          <!-- Right Arrow -->
+          <button class="carousel-arrow carousel-arrow-right" @click="nextItem" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Counter -->
+        <div class="carousel-counter">
+          <span class="carousel-counter-label">{{ isPhoto ? 'Foto' : 'Video' }}</span>
+          <span class="carousel-counter-num">{{ currentIndex + 1 }}</span>
+          <span class="carousel-counter-sep">/</span>
+          <span class="carousel-counter-total">{{ totalItems }}</span>
         </div>
       </div>
     </section>
@@ -233,19 +272,20 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref } from "vue";
+import { computed, nextTick, onBeforeUnmount, ref, watch } from "vue";
+
+// Google Drive folder configuration
+const driveFolderId = "1bn88ebnrYDrbb5QftMvF_Zs_YTdh1Nch";
 
 const phone = "whatsapp";
 const email = "email";
-const driveFolderId = "1bn88ebnrYDrbb5QftMvF_Zs_YTdh1Nch";
-const driveEmbedUrl = `https://drive.google.com/embeddedfolderview?id=${driveFolderId}#grid`;
 const photoUrl = ref(`${import.meta.env.BASE_URL}ibu.jpeg`);
 const musicAudio = new Audio(`${import.meta.env.BASE_URL}dd.mp3`);
 const isMusicPlaying = ref(false);
 
 musicAudio.loop = true;
 musicAudio.preload = "auto";
-musicAudio.volume = 0.6;
+musicAudio.volume = 0.9;
 
 function handleImgError(e: Event) {
   (e.target as HTMLImageElement).src =
@@ -271,6 +311,114 @@ onBeforeUnmount(() => {
   musicAudio.pause();
   musicAudio.currentTime = 0;
 });
+
+// =====================
+// AUTO LOAD GALLERY FROM LOCAL FOLDER
+// =====================
+const driveFiles = ref<{ type: string; id: string }[]>([]);
+const isGalleryLoading = ref(true);
+
+// Load files from local folder using Vite glob import
+function loadDriveFiles() {
+  // Use Vite's glob import to get all files from the gallery folder
+  const modules = import.meta.glob('/public/7hari/7hari ibu_/*.{jpg,jpeg,png,mp4}', { eager: true });
+  
+  const files = Object.keys(modules)
+    .map(path => {
+      const name = path.split('/').pop() || '';
+      const ext = name.toLowerCase().split('.').pop();
+      return {
+        type: ext === 'mp4' ? 'video' : 'photo',
+        id: path.replace('/public/', '')
+      };
+    })
+    .sort((a, b) => a.id.localeCompare(b.id));
+  
+  driveFiles.value = files;
+  isGalleryLoading.value = false;
+}
+
+// Helper to get file URL (local or Drive)
+function getPhotoUrl(filePath: string, width = 800): string {
+  return `${import.meta.env.BASE_URL}${filePath}`;
+}
+
+function getVideoUrl(filePath: string): string {
+  return `${import.meta.env.BASE_URL}${filePath}`;
+}
+
+// Load gallery files on init
+loadDriveFiles();
+
+const demoGalleryItems = computed(() => {
+  // If we have Drive files, use them
+  if (driveFiles.value.length > 0) {
+    return driveFiles.value.map(file => ({
+      type: file.type,
+      url: file.type === "photo" ? getPhotoUrl(file.id) : getVideoUrl(file.id)
+    }));
+  }
+  // Fallback demo images
+  return [
+    { type: "photo", url: "https://picsum.photos/800/600?random=1" },
+    { type: "photo", url: "https://picsum.photos/800/600?random=2" },
+    { type: "photo", url: "https://picsum.photos/800/600?random=3" },
+    { type: "photo", url: "https://picsum.photos/800/600?random=4" },
+    { type: "video", url: "https://drive.google.com/uc?export=download&id=1EXAMPLE" },
+    { type: "photo", url: "https://picsum.photos/800/600?random=5" },
+    { type: "photo", url: "https://picsum.photos/800/600?random=6" },
+    { type: "photo", url: "https://picsum.photos/800/600?random=7" },
+    { type: "photo", url: "https://picsum.photos/800/600?random=8" },
+  ];
+});
+
+const currentIndex = ref(0);
+const totalItems = computed(() => demoGalleryItems.value.length);
+const currentItem = computed(() => demoGalleryItems.value[currentIndex.value]);
+const isPhoto = computed(() => currentItem.value?.type === "photo");
+const currentVideoEl = ref<HTMLVideoElement | null>(null);
+
+// Auto-play video when center item is video
+watch(currentIndex, async (newIdx) => {
+  // Pause all videos first
+  document.querySelectorAll('.carousel-media').forEach((el) => {
+    if (el instanceof HTMLVideoElement) {
+      el.pause();
+      el.currentTime = 0;
+    }
+  });
+
+  // Adjust music volume based on current media type
+  if (demoGalleryItems.value[newIdx]?.type === "video") {
+    musicAudio.volume = 0.4;
+  } else if (isMusicPlaying.value) {
+    musicAudio.volume = 0.9;
+  }
+
+  // Wait for DOM update then play video if current item is video
+  await nextTick();
+  const videoEl = document.querySelector(`.carousel-item[data-idx="${newIdx}"] video`) as HTMLVideoElement;
+  if (videoEl && demoGalleryItems.value[newIdx]?.type === "video") {
+    try {
+      await videoEl.play();
+    } catch (e) {
+      // Autoplay blocked, ignore
+    }
+  }
+});
+
+// Carousel navigation
+function nextItem() {
+  currentIndex.value = (currentIndex.value + 1) % totalItems.value;
+}
+
+function prevItem() {
+  currentIndex.value = (currentIndex.value - 1 + totalItems.value) % totalItems.value;
+}
+
+function goTo(index: number) {
+  currentIndex.value = index;
+}
 
 const tahlilDays = computed(() => {
   const wafat = new Date("2026-04-28");
