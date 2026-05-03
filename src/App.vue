@@ -30,19 +30,18 @@
 
         <div class="inna-block">
           <p class="inna-arabic">إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ</p>
-          <p class="inna-latin">Innalillahi Wa Inna Ilaihi Raji'un</p>
         </div>
 
         <div class="name-block">
-          <p class="in-memoriam-label">— In Memoriam —</p>
-          <h1 class="almarhumah-title">Almarhumah</h1>
-          <h2 class="name-title">Sunipah binti Karim</h2>
+          <p class="in-memoriam-label">almarhumah</p>
+          <h2 class="name-title">ibu Sunipah binti Karim</h2>
           <div class="gold-rule">
             <span class="gold-rule-line"></span>
             <span class="gold-rule-diamond">◆</span>
             <span class="gold-rule-line"></span>
           </div>
           <p class="wafat-text">Wafat pada <span class="wafat-date">28 April 2026</span></p>
+          <p class="wafat-text">hari selasa - jam 19:00 wib</p>
           <p class="wafat-sub">Semoga Allah SWT merahmati dan menempatkan beliau di surga yang tertinggi</p>
         </div>
       </div>
@@ -73,7 +72,7 @@
             <span class="orn-line"></span>
           </div>
           <p class="section-desc light">
-            Memohon kepada Allah SWT agar memberikan ampunan, rahmat, dan tempat terbaik bagi almarhumah Sunipah binti Karim
+            Memohon kepada Allah SWT agar memberikan ampunan, rahmat, dan tempat terbaik bagi almarhumah ibuSunipah binti Karim
           </p>
         </div>
 
@@ -124,7 +123,6 @@
             <span class="orn-gem gold">❧</span>
             <span class="orn-line gold"></span>
           </div>
-          <p class="section-desc light">Kumpulan foto dan video kenangan indah bersama beliau</p>
         </div>
 
         <div class="gallery-frame">
@@ -142,7 +140,6 @@
             ></iframe>
           </div>
         </div>
-        <p class="gallery-note">Foto dan video akan otomatis tampil saat diunggah</p>
       </div>
     </section>
 
@@ -158,10 +155,9 @@
       <div class="container-md" style="position:relative;z-index:2">
         <div class="section-header">
           <span class="section-tag">Layanan</span>
-          <h2 class="section-title light">Portfolio Kenangan Custom</h2>
+          <h2 class="section-title light">Kenangan</h2>
           <div class="section-ornament">
             <span class="orn-line"></span>
-            <span class="orn-gem">❧</span>
             <span class="orn-line"></span>
           </div>
           <p class="section-desc light">
@@ -177,9 +173,9 @@
         </div>
 
         <div class="contact-card">
-          <div class="contact-avatar"><span>M</span></div>
+          <img src="/profil.jpeg" alt="Muhammad Munirudin" class="contact-avatar-img" />
           <p class="contact-name">Muhammad Munirudin</p>
-          <p class="contact-role">Pembuat Portfolio Kenangan Digital</p>
+          <p class="contact-role">Pembuat Kenangan Digital</p>
           <div class="contact-actions">
             <a
               :href="`https://wa.me/62${phone.substring(1)}?text=Assalamu'alaikum, saya ingin memesan portfolio kenangan.`"
@@ -230,7 +226,7 @@
           <circle cx="17" cy="16" r="3" fill="currentColor" stroke="none" />
         </svg>
       </span>
-      <span class="music-fab-text">Music</span>
+      <span class="music-fab-text"></span>
     </button>
 
   </div>
@@ -239,8 +235,8 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, ref } from "vue";
 
-const phone = "081337694488";
-const email = "muhammadmunirudin26@gmail.com";
+const phone = "whatsapp";
+const email = "email";
 const driveFolderId = "1bn88ebnrYDrbb5QftMvF_Zs_YTdh1Nch";
 const driveEmbedUrl = `https://drive.google.com/embeddedfolderview?id=${driveFolderId}#grid`;
 const photoUrl = ref(`${import.meta.env.BASE_URL}ibu.jpeg`);
