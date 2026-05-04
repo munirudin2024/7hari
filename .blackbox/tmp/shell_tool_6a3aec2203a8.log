@@ -1,0 +1,151 @@
+
+> @workspace/memorial@0.0.0 dev
+> vite --config vite.config.ts --host 0.0.0.0
+
+Port 5173 is in use, trying another one...
+
+  VITE v5.4.21  ready in 1007 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: http://10.0.3.191:5174/
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502185833.jpg instead of /public/7hari/7hari ibu_/IMG20260502185833.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502185833.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502190037.jpg instead of /public/7hari/7hari ibu_/IMG20260502190037.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502190037.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502190347.jpg instead of /public/7hari/7hari ibu_/IMG20260502190347.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502190347.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502192125.jpg instead of /public/7hari/7hari ibu_/IMG20260502192125.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502192125.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502191631.jpg instead of /public/7hari/7hari ibu_/IMG20260502191631.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502191631.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502190448.jpg instead of /public/7hari/7hari ibu_/IMG20260502190448.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502190448.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502192135.jpg instead of /public/7hari/7hari ibu_/IMG20260502192135.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502192135.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502192810.jpg instead of /public/7hari/7hari ibu_/IMG20260502192810.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502192810.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502192141.jpg instead of /public/7hari/7hari ibu_/IMG20260502192141.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502192141.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502192913.jpg instead of /public/7hari/7hari ibu_/IMG20260502192913.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502192913.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502192931.jpg instead of /public/7hari/7hari ibu_/IMG20260502192931.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502192931.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502193921.jpg instead of /public/7hari/7hari ibu_/IMG20260502193921.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502193921.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502194414.jpg instead of /public/7hari/7hari ibu_/IMG20260502194414.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502194414.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502194431.jpg instead of /public/7hari/7hari ibu_/IMG20260502194431.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502194431.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502194435.jpg instead of /public/7hari/7hari ibu_/IMG20260502194435.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502194435.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502194437.jpg instead of /public/7hari/7hari ibu_/IMG20260502194437.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502194437.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502194433.jpg instead of /public/7hari/7hari ibu_/IMG20260502194433.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502194433.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502194442.jpg instead of /public/7hari/7hari ibu_/IMG20260502194442.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502194442.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502194529.jpg instead of /public/7hari/7hari ibu_/IMG20260502194529.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502194529.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502194537.jpg instead of /public/7hari/7hari ibu_/IMG20260502194537.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502194537.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502195153.jpg instead of /public/7hari/7hari ibu_/IMG20260502195153.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502195153.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260502195339.jpg instead of /public/7hari/7hari ibu_/IMG20260502195339.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260502195339.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503052140.jpg instead of /public/7hari/7hari ibu_/IMG20260503052140.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503052140.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503093715.jpg instead of /public/7hari/7hari ibu_/IMG20260503093715.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503093715.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503173128.jpg instead of /public/7hari/7hari ibu_/IMG20260503173128.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503173128.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503173048.jpg instead of /public/7hari/7hari ibu_/IMG20260503173048.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503173048.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503193750.jpg instead of /public/7hari/7hari ibu_/IMG20260503193750.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503193750.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503192140.jpg instead of /public/7hari/7hari ibu_/IMG20260503192140.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503192140.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503192142.jpg instead of /public/7hari/7hari ibu_/IMG20260503192142.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503192142.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503194235.jpg instead of /public/7hari/7hari ibu_/IMG20260503194235.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503194235.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503195401.jpg instead of /public/7hari/7hari ibu_/IMG20260503195401.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503195401.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503194442.jpg instead of /public/7hari/7hari ibu_/IMG20260503194442.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503194442.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503195412.jpg instead of /public/7hari/7hari ibu_/IMG20260503195412.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503195412.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503195416.jpg instead of /public/7hari/7hari ibu_/IMG20260503195416.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503195416.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503195427.jpg instead of /public/7hari/7hari ibu_/IMG20260503195427.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503195427.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503203251.jpg instead of /public/7hari/7hari ibu_/IMG20260503203251.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503203251.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503201546.jpg instead of /public/7hari/7hari ibu_/IMG20260503201546.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503201546.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503195458.jpg instead of /public/7hari/7hari ibu_/IMG20260503195458.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503195458.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503213707.jpg instead of /public/7hari/7hari ibu_/IMG20260503213707.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503213707.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/IMG20260503214034.jpg instead of /public/7hari/7hari ibu_/IMG20260503214034.jpg.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/IMG20260503214034.jpg?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/VID20260502192621.mp4 instead of /public/7hari/7hari ibu_/VID20260502192621.mp4.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/VID20260502192621.mp4?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/VID20260502193307.mp4 instead of /public/7hari/7hari ibu_/VID20260502193307.mp4.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/VID20260502193307.mp4?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/VID20260502194558.mp4 instead of /public/7hari/7hari ibu_/VID20260502194558.mp4.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/VID20260502194558.mp4?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/VID20260503052337.mp4 instead of /public/7hari/7hari ibu_/VID20260503052337.mp4.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/VID20260503052337.mp4?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/VID20260503194245.mp4 instead of /public/7hari/7hari ibu_/VID20260503194245.mp4.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/VID20260503194245.mp4?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/VID20260503201605.mp4 instead of /public/7hari/7hari ibu_/VID20260503201605.mp4.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/VID20260503201605.mp4?url.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/7hari/7hari ibu_/video_20260427_203810.mp4 instead of /public/7hari/7hari ibu_/video_20260427_203810.mp4.
+If you intend to use the URL of that asset, use /7hari/7hari ibu_/video_20260427_203810.mp4?url.

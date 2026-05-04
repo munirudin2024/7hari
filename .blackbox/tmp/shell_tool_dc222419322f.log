@@ -1,0 +1,15 @@
+
+> @workspace/memorial@0.0.0 dev
+> vite --config vite.config.ts --host 0.0.0.0
+
+Port 5173 is in use, trying another one...
+
+  VITE v5.4.21  ready in 467 ms
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: http://10.0.1.59:5174/
+8:33:25 PM [vite] hmr update /src/App.vue, /src/index.css
+8:33:36 PM [vite] hmr update /src/App.vue, /src/index.css
+8:38:58 PM [vite] hmr update /src/App.vue, /src/index.css
+8:49:47 PM [vite] hmr update /src/App.vue, /src/index.css
+8:49:52 PM [vite] hmr update /src/App.vue, /src/index.css
